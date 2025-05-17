@@ -1,5 +1,6 @@
 import { Information } from "./components/information/Information";
 import { Field } from "./components/field/Field";
+import PropTypes from "prop-types";
 
 export const AppLayout = ({
   field,
@@ -42,4 +43,15 @@ export const AppLayout = ({
       </button>
     </>
   );
+};
+
+AppLayout.propTypes = {
+  field: PropTypes.arrayOf(PropTypes.string),
+  isDraw: PropTypes.bool,
+  isGameEnded: PropTypes.bool,
+  currentPlayer: PropTypes.string,
+  setField: PropTypes.func,
+  setCurrentPlayer: PropTypes.func,
+  setIsDraw: PropTypes.func,
+  setIsGameEnded: PropTypes.func,
 };

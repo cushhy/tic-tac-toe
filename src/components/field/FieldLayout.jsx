@@ -1,4 +1,5 @@
 import styles from "./Field.module.css";
+import PropTypes from "prop-types";
 
 const WIN_PATTERNS = [
   [0, 1, 2],
@@ -65,4 +66,15 @@ export const FieldLayout = ({
       ))}
     </div>
   );
+};
+
+FieldLayout.propTypes = {
+  field: PropTypes.arrayOf(PropTypes.string),
+  isDraw: PropTypes.bool,
+  isGameEnded: PropTypes.bool,
+  currentPlayer: PropTypes.string,
+  setField: PropTypes.func,
+  setCurrentPlayer: PropTypes.func,
+  setIsDraw: PropTypes.func,
+  setIsGameEnded: PropTypes.func,
 };

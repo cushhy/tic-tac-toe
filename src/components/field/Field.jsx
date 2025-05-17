@@ -1,4 +1,5 @@
 import { FieldLayout } from "./FieldLayout";
+import PropTypes from "prop-types";
 
 export const Field = ({
   field,
@@ -22,4 +23,15 @@ export const Field = ({
       setIsDraw={setIsDraw}
     />
   );
+};
+
+Field.propTypes = {
+  field: PropTypes.arrayOf(PropTypes.string),
+  isDraw: PropTypes.bool,
+  isGameEnded: PropTypes.bool,
+  currentPlayer: PropTypes.string,
+  setField: PropTypes.func,
+  setCurrentPlayer: PropTypes.func,
+  setIsDraw: PropTypes.func,
+  setIsGameEnded: PropTypes.func,
 };
