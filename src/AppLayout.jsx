@@ -11,6 +11,7 @@ export const AppLayout = ({
   setCurrentPlayer,
   setIsDraw,
   setIsGameEnded,
+  restGame,
 }) => {
   return (
     <>
@@ -31,11 +32,7 @@ export const AppLayout = ({
       />
       <button
         onClick={() => {
-          setCurrentPlayer("X");
-          setIsDraw(false);
-          setIsGameEnded(false);
-          const newField = ["", "", "", "", "", "", "", "", ""];
-          setField(newField);
+          restGame();
         }}
         style={{ marginTop: 30 }}
       >

@@ -8,6 +8,14 @@ function App() {
   const [isDraw, setIsDraw] = useState(false);
   const [field, setField] = useState(["", "", "", "", "", "", "", "", ""]);
 
+  const restGame = () => {
+    setCurrentPlayer("X");
+    setIsDraw(false);
+    setIsGameEnded(false);
+    const newField = ["", "", "", "", "", "", "", "", ""];
+    setField(newField);
+  };
+
   return (
     <AppLayout
       field={field}
@@ -18,6 +26,7 @@ function App() {
       setCurrentPlayer={setCurrentPlayer}
       setIsDraw={setIsDraw}
       setIsGameEnded={setIsGameEnded}
+      restGame={restGame}
     />
   );
 }
