@@ -1,15 +1,7 @@
 import styles from "./Information.module.css";
 import PropTypes from "prop-types";
 
-export const InformationLayout = ({ isDraw, isGameEnded, currentPlayer }) => {
-  let status;
-  if (isDraw) {
-    status = "Ничья";
-  } else if (!isDraw && isGameEnded) {
-    status = `Победа: ${currentPlayer}`;
-  } else {
-    status = `Ходит: ${currentPlayer}`;
-  }
+export const InformationLayout = ({ status }) => {
   return (
     <>
       <h1>Крестики-нолики</h1>
